@@ -1,0 +1,153 @@
+import Image from "next/image";
+import { FlipWords } from "@/components/ui/flip-words";
+import { BackgroundBeams } from "@/components/ui/background-beams";
+
+export default function Home() {
+  const words = [
+    "Visual Storytellers",
+    "Digital Dreamers",
+    "Media Innovators",
+    "Creative Minds",
+  ];
+  return (
+    <body className="bg-black">
+      <div className="overflow-auto relative">
+        <header className=" h-[4.3rem] pt-4 w-full p-2.5 fixed z-50">
+          <nav className="bg-neutral-900 h-full w-full rounded-full px-4">
+            <div className="w-full h-full flex flex-row justify-between items-center">
+              <div className="h-full flex flex-row space-x-0.5 items-center">
+                <Image
+                  src="/reshot-icon-yellow-flower-GLBAP6YNMU.svg"
+                  alt="Creem Icon"
+                  width={40}
+                  height={40}
+                />
+                <div className="text-white">Cadet Artistry Hub</div>
+              </div>
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="yellow"
+                  className="size-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
+                </svg>
+              </div>
+            </div>
+          </nav>
+        </header>
+        <div className="mt-[4.7rem]">
+          <div className="flex justify-center m-2 mb-0">
+            <button className="bg-neutral-800  border-neutral-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-700 rounded-full p-px text-[0.6rem] font-semibold leading-6  text-white inline-block">
+              <span className="absolute inset-0 overflow-hidden rounded-full">
+                <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+              </span>
+              <div className="relative flex space-x-2 items-center z-10 rounded-full bg-neutral-800 py-1.5 px-5 ring-1 ring-white/10 ">
+                <span>
+                  Save up to 50% on fees with our competitive pricing 🎉
+                </span>
+                <svg
+                  fill="none"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  width="16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.75 8.75L14.25 12L10.75 15.25"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="1.5"
+                  />
+                </svg>
+              </div>
+              <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40" />
+            </button>
+          </div>
+          <h1 className="text-2xl md:text-4xl lg:text-8xl font-semibold max-w-6xl mx-auto text-center flex justify-center mt-6 relative z-10 drop-shadow-2xl">
+            <span className="h-full flex justify-center items-start pr-2">
+              <span className="absolute mx-auto text-[1.5rem] flex border w-fit bg-neutral-300 blur-xl  from-blue-500 via-teal-500 to-pink-500 bg-clip-text box-content font-extrabold text-transparent text-center select-none">
+                Artistry
+              </span>
+              <h1 className="relative top-0 w-fit h-auto justify-center flex bg-white items-center from-blue-500 via-teal-500 to-pink-500 bg-clip-text font-extrabold text-transparent text-center select-auto">
+                Artistry
+              </h1>
+            </span>
+            <span className="flex items-start text-white"> Hub For </span>
+          </h1>
+          <div className="h-[4rem] flex justify-center items-center px-4">
+            <div className="text-2xl mx-auto font-normal ">
+              <FlipWords
+                words={words}
+                duration={3000}
+                className="!text-yellow-200"
+              />{" "}
+              <br />
+            </div>
+          </div>
+        </div>
+        <div className="mt-4 p-4 text-white text-[1rem] text-center w-full flex flex-col justify-center items-center">
+          <p className="w-[65%]">
+            Empowering small teams to achieve big business outcomes.
+          </p>
+          <p className="w-[100%]">
+            A complete financial infrastructure for the next generation of
+            efficient companies.{" "}
+          </p>
+          <p className="mt-8 text-[1.1rem] font-bold text-yellow-200">
+            Create for the future of art.
+          </p>
+        </div>
+        <div className="mt-4 flex justify-evenly mx-4">
+          <button className="relative inline-flex h-8 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-neutral-400 focus:ring-offset-2 focus:ring-offset-neutral-50">
+            <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+            <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-neutral-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
+              Get Started For Free 🍦
+            </span>
+          </button>
+          <button className="px-8 py-2  bg-black text-white text-sm rounded-md font-semibold hover:bg-black/[0.8] hover:shadow-lg">
+            <span className="flex flex-row items-center">
+              Contact Us
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="size-5 pl-2"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                />
+              </svg>
+            </span>
+          </button>
+        </div>
+        <div className="p-4 border bg-neutral-800 border-neutral-700 rounded-[32px] mt-20 relative">
+          <div className="absolute inset-x-0 bottom-0 h-40 w-full bg-gradient-to-b from-transparent via-black/80 to-black scale-[1.1] pointer-events-none"></div>
+          <div className="p-2 bg-black border-neutral-700 border rounded-[24px]">
+            <Image
+              src="/header.webp"
+              alt="Description"
+              width={1920}
+              height={108}
+            />
+          </div>
+        </div>
+
+        <div className="h-[50rem] w-full border-2 border-white"></div>
+      </div>
+      <BackgroundBeams className="fixed" />
+    </body>
+  );
+}
