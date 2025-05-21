@@ -308,10 +308,10 @@ export default function Home() {
                 Pricing
               </a>
               <a className="transition-colors text-slate-300 text-muted-dark hover:text-neutral-400 text-xs sm:text-sm">
-                Pricing
+                Contact
               </a>
               <a className="transition-colors text-slate-300 text-muted-dark hover:text-neutral-400 text-xs sm:text-sm">
-                Pricing
+                Blog
               </a>
             </div>
             <div className="flex justify-center space-y-4 flex-col mt-4 relative z-10">
