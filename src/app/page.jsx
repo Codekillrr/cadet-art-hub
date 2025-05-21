@@ -14,61 +14,73 @@ export default function Home() {
       quote: "Design System",
       name: "",
       title: "",
+      imgsrc: "/carousel icons/icon1.svg",
     },
     {
       quote: "UI Components",
       name: "",
       title: "",
+      imgsrc: "/carousel icons/icon2.svg",
     },
     {
       quote: "React",
       name: "",
       title: "",
+      imgsrc: "/carousel icons/icon3.svg",
     },
     {
       quote: "Next.js",
       name: "",
       title: "",
+      imgsrc: "/carousel icons/icon1.svg",
     },
     {
       quote: "Tailwind CSS",
       name: "",
       title: "",
+      imgsrc: "/carousel icons/icon1.svg",
     },
     {
       quote: "TypeScript",
       name: "",
       title: "",
+      imgsrc: "/carousel icons/icon1.svg",
     },
     {
       quote: "Animations",
       name: "",
       title: "",
+      imgsrc: "/carousel icons/icon1.svg",
     },
     {
       quote: "Responsive",
       name: "",
       title: "",
+      imgsrc: "/carousel icons/mobile.svg",
     },
     {
       quote: "Accessible",
       name: "",
       title: "",
+      imgsrc: "/carousel icons/icon1.svg",
     },
     {
-      quote: "Dark Mode",
+      quote: "SSL Security",
       name: "",
       title: "",
+      imgsrc: "/carousel icons/security.svg",
     },
     {
       quote: "Performance",
       name: "",
       title: "",
+      imgsrc: "/carousel icons/icon1.svg",
     },
     {
       quote: "SEO",
       name: "",
       title: "",
+      imgsrc: "/carousel icons/icon1.svg",
     },
   ];
 
@@ -209,8 +221,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-20 grid grid-cols-1 px-6">
-        <section className=" h-[30rem] w-full rounded-2xl [background-image:radial-gradient(88%_100%_at_top,rgba(255,255,255,0.5),rgba(255,255,255,0))] relative px-4 py-20">
+      <div className="mt-20 grid grid-cols-1 gap-4 px-6">
+        <section className=" h-[30rem] w-full rounded-2xl [background-image:radial-gradient(88%_100%_at_top,rgba(255,255,255,0.5),rgba(255,255,255,0))] relative px-4 py-20 overflow-hidden">
           <div className="absolute inset-0 h-full w-full scale-[1.2] transform [mask-image:radial-gradient(#fff,transparent,75%)] opacity-10 bg-[url(https://www.creem.io/noise.webp)] bg-size-[30%]"></div>
           <div className="max-w-xs">
             <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-primary text-yellow-200">
@@ -230,6 +242,27 @@ export default function Home() {
             speed="normal"
             className="my-5 mx-2"
           />
+          <Image
+            src="https://www.creem.io/code-pretty.png"
+            width={400}
+            height={400}
+            className="absolute -right-4 lg:-right-[10%] grayscale filter -bottom-10 object-contain rounded-2xl"
+          />
+        </section>
+        <section className=" h-[30rem] w-full rounded-2xl [background-image:radial-gradient(88%_100%_at_top,rgba(255,255,255,0.5),rgba(255,255,255,0))] relative px-4 py-20 overflow-hidden">
+          <div className="absolute inset-0 h-full w-full scale-[1.2] transform [mask-image:radial-gradient(#fff,transparent,75%)] opacity-10 bg-[url(https://www.creem.io/noise.webp)] bg-size-[30%]"></div>
+          <div className="max-w-xs">
+            <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-primary text-yellow-200">
+              Global Merchant of Record{" "}
+            </h2>
+            <p className="mt-4 text-left text-base/6 text-neutral-200">
+              Small teams are achieving what used to require 150+ people.
+              <br />
+              <br />
+              We're building the financial infrastructure to power this
+              revolution.
+            </p>
+          </div>
         </section>
       </div>
     </div>

@@ -2,6 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 
 export const InfiniteMovingCards = ({
   items,
@@ -14,6 +15,7 @@ export const InfiniteMovingCards = ({
     quote: string;
     name: string;
     title: string;
+    imgsrc: string;
   }[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
@@ -87,12 +89,23 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item, idx) => (
           <li
-            className="relative w-auto max-w-full shrink-0 rounded-xl px-4 py-2 mx-2 md:mx-3 bg-neutral-900"
+            className="relative w-auto max-w-full shrink-0 rounded-xl px-2 py-2 mx-2 md:mx-3 bg-neutral-900"
             key={idx}
           >
-            <span className="relative z-20 text-sm font-medium flex items-center text-neutral-800 whitespace-nowrap dark:text-gray-100">
-              {item.quote}
-            </span>
+            <div className="flex flex-row">
+              <span className="size-6 mr-1">
+                <Image
+                  src={item.imgsrc}
+                  alt=""
+                  width={25} // set a width (adjust as needed)
+                  height={15}
+                  className="rounded-full"
+                />
+              </span>
+              <span className="relative z-20 text-sm font-medium flex items-center text-white whitespace-nowrap dark:text-gray-100">
+                {item.quote}
+              </span>
+            </div>
           </li>
         ))}
       </ul>
