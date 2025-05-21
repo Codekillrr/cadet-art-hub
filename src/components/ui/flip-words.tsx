@@ -75,7 +75,7 @@ export const FlipWords = ({
             }}
             className="inline-block whitespace-nowrap"
           >
-            <span className="absolute mx-auto text-[2rem] flex border w-fit bg-neutral-600 blur-xl bg-clip-text box-content font-extrabold text-transparent text-center select-none">
+            <span className="absolute mx-auto text-[2rem] flex border w-fit bg-neutral-400 blur-xl bg-clip-text box-content font-extrabold text-transparent text-center select-none">
               {word}
             </span>
             {word.split("").map((letter, letterIndex) => (
