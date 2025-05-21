@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FlipWords } from "@/components/ui/flip-words";
+// import { FlipWords } from "@/components/ui/flip-words";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 
 export default function Home() {
@@ -159,11 +159,12 @@ export default function Home() {
         </h1>
         <div className="h-[4rem] flex justify-center items-center px-4">
           <div className="text-2xl mx-auto font-normal ">
-            <FlipWords
+            {/* <FlipWords
               words={words}
               duration={3000}
               className="!text-yellow-200"
-            />{" "}
+            />{" "} */}
+
             <br />
           </div>
         </div>
@@ -244,6 +245,7 @@ export default function Home() {
           />
           <Image
             src="https://www.creem.io/code-pretty.png"
+            alt="code"
             width={400}
             height={400}
             className="absolute -right-4 lg:-right-[10%] grayscale filter -bottom-10 object-contain rounded-2xl"
@@ -251,19 +253,99 @@ export default function Home() {
         </section>
         <section className=" h-[30rem] w-full rounded-2xl [background-image:radial-gradient(88%_100%_at_top,rgba(255,255,255,0.5),rgba(255,255,255,0))] relative px-4 py-20 overflow-hidden">
           <div className="absolute inset-0 h-full w-full scale-[1.2] transform [mask-image:radial-gradient(#fff,transparent,75%)] opacity-10 bg-[url(https://www.creem.io/noise.webp)] bg-size-[30%]"></div>
-          <div className="max-w-xs">
-            <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-primary text-yellow-200">
-              Global Merchant of Record{" "}
-            </h2>
-            <p className="mt-4 text-left text-base/6 text-neutral-200">
-              Small teams are achieving what used to require 150+ people.
-              <br />
-              <br />
-              We're building the financial infrastructure to power this
-              revolution.
+
+          <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-primary text-yellow-200">
+            Global Merchant of Record{" "}
+          </h2>
+          <div className="mt-4 max-w-[26rem] text-left text-base/6 text-white">
+            <p>
+              Focus on your product, not on bureaucracy. We handle the heavy
+              lifting of
+              <strong> Tax Compliance. </strong>
             </p>
+            <div className="mt-6 bg-neutral-900/50 backdrop-blur-sm rounded-2xl p-6 border border-neutral-800">
+              <div className="flex items-center justify-between mb-4">
+                <h3 className=""></h3>
+              </div>
+            </div>
           </div>
         </section>
+      </div>
+
+      <div className="relative mt-20">
+        <div className="border-t border-neutral-800 px-8 pt-20 pb-32 relative bg-black z-0">
+          <div className="absolute inset-0 -z-9 flex items-center justify-center overflow-hidden pointer-events-none bg-transparent">
+            <p className="text-center text-5xl z-9 md:text-9xl lg:text-[18rem] font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-950 via-neutral-800 to-[#FFBE98]/30 select-none">
+              CADET ART HUB
+            </p>
+          </div>
+          <div className="max-w-7xl mx-auto text-sm text-neutral-400 flex sm:flex-row flex-col justify-between items-start z-0">
+            <div>
+              <div className="mr-4  md:flex mb-4 z-0">
+                <a className="font-normal flex space-x-1 items-center text-sm  text-blackpy-1  relative z-20">
+                  <Image
+                    src="/reshot-icon-yellow-flower-GLBAP6YNMU.svg"
+                    alt="Creem Icon"
+                    width={40}
+                    height={40}
+                    className=""
+                  />
+                  <span className="font-medium text-white">
+                    Cadet Artistry Hub
+                  </span>
+                </a>
+              </div>
+              <div className="relative z-10">
+                Copyright © 2025 Cadet Artistry Hub OÜ
+              </div>
+              <div className="mt-2 relative z-10">All rights reserved</div>
+            </div>
+          </div>
+          <div className="grid grid-cols-5 gap-10 items-start mt-10 md:mt-0">
+            <div className="flex justify-center space-y-4 flex-col mt-4 relative z-10">
+              <span className="text-white">Pages</span>
+              <a className="transition-colors text-slate-300 text-muted-dark hover:text-neutral-400 text-xs sm:text-sm">
+                Pricing
+              </a>
+              <a className="transition-colors text-slate-300 text-muted-dark hover:text-neutral-400 text-xs sm:text-sm">
+                Pricing
+              </a>
+              <a className="transition-colors text-slate-300 text-muted-dark hover:text-neutral-400 text-xs sm:text-sm">
+                Pricing
+              </a>
+            </div>
+            <div className="flex justify-center space-y-4 flex-col mt-4 relative z-10">
+              <span className="text-white">Legal</span>
+              <a className="transition-colors text-slate-300 text-muted-dark hover:text-neutral-400 text-xs sm:text-sm">
+                Privacy Policy
+              </a>
+              <a className="transition-colors text-slate-300 text-muted-dark hover:text-neutral-400 text-xs sm:text-sm">
+                Terms of Service
+              </a>
+              <a className="transition-colors text-slate-300 text-muted-dark hover:text-neutral-400 text-xs sm:text-sm">
+                About Us
+              </a>
+            </div>
+            <div className="flex justify-center space-y-4 flex-col mt-4 relative z-10">
+              <span className="text-white">Socials</span>
+              <a className="transition-colors text-slate-300 text-muted-dark hover:text-neutral-400 text-xs sm:text-sm">
+                Twitter
+              </a>
+              <a className="transition-colors text-slate-300 text-muted-dark hover:text-neutral-400 text-xs sm:text-sm">
+                Discord
+              </a>
+            </div>
+            <div className="flex justify-center space-y-4 flex-col mt-4 relative z-10">
+              <span className="text-white">Integrations</span>
+              <a className="transition-colors text-slate-300 text-muted-dark hover:text-neutral-400 text-xs sm:text-sm">
+                AI Negotiation
+              </a>
+              <a className="transition-colors text-slate-300 text-muted-dark hover:text-neutral-400 text-xs sm:text-sm">
+                Affiliates
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
