@@ -2,6 +2,7 @@ import Image from "next/image";
 // import { FlipWords } from "@/components/ui/flip-words";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
+import { VerticalMovingCards } from "@/components/ui/vertical-moving-cards";
 
 export default function Home() {
   const words = [
@@ -85,6 +86,38 @@ export default function Home() {
       name: "",
       title: "",
       imgsrc: "/carousel icons/icon1.svg",
+    },
+  ];
+
+  const testimonials = [
+    {
+      quote:
+        "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.",
+      name: "Charles Dickens",
+      title: "A Tale of Two Cities",
+    },
+    {
+      quote:
+        "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
+      name: "William Shakespeare",
+      title: "Hamlet",
+    },
+    {
+      quote: "All that we see or seem is but a dream within a dream.",
+      name: "Edgar Allan Poe",
+      title: "A Dream Within a Dream",
+    },
+    {
+      quote:
+        "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
+      name: "Jane Austen",
+      title: "Pride and Prejudice",
+    },
+    {
+      quote:
+        "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
+      name: "Herman Melville",
+      title: "Moby-Dick",
     },
   ];
 
@@ -315,9 +348,39 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"></div>
       </div>
 
+      <div className="relative z-20 pt-0 pb-40">
+        <h2 className="max-w-5xl mx-auto text-center tracking-tight font-medium text-white text-3xl md:text-5xl md:leading-tight">
+          <span className="inline-block items-center text-balance">
+            Loved by Indie Hackers and VC Backed SaaS
+          </span>
+        </h2>
+        <h2 className="text-sm md:text-base my-4 text-muted text-neutral-400 font-normal dark:text-muted-dark px-10 text-center max-w-lg mx-auto">
+          <span className="inline-block items-center text-wrap">
+            Cadet Art Hub is used by companies of every size. Here's what some
+            of them have to say.
+          </span>
+        </h2>
+        <div className="h-[40rem] my-20 rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+          <VerticalMovingCards
+            items={testimonials}
+            direction="up"
+            speed="normal"
+          />
+        </div>
+      </div>
+
       <footer className="relative mt-20">
         <div className="border-t border-neutral-800 px-8 pt-20 pb-32 relative bg-black z-0">
-          <div className="absolute inset-0 -z-9 flex items-center justify-center overflow-hidden pointer-events-none bg-transparent">
+          <div className="absolute inset-0 -z-9 flex items-center justify-center  pointer-events-none bg-transparent">
+            <div className="h-full w-auto absolute left-0 inset-0 z-0">
+              <Image
+                src="/gun-man.jpeg"
+                alt="gunman"
+                width={500}
+                height={500}
+                className="object-cover z-10 opacity-20 h-full"
+              />
+            </div>
             <p className="text-center text-5xl z-9 md:text-9xl lg:text-[18rem] font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-950 via-neutral-800 to-[#FFBE98]/30 select-none">
               CADET ART HUB
             </p>
