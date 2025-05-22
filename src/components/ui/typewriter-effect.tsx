@@ -110,7 +110,7 @@ export const TypewriterEffectSmooth = ({
   className?: string;
   cursorClassName?: string;
 }) => {
-  const [scope, animate] = useAnimate();
+  const [scope] = useAnimate();
   const isInView = useInView(scope);
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
@@ -168,11 +168,7 @@ export const TypewriterEffectSmooth = ({
             whiteSpace: "nowrap",
           }}
         >
-          <span
-            className={cn(`dark:text-white text-black`, currentWord.className)}
-          >
-            {displayedText}
-          </span>
+          <span className={cn(``, currentWord.className)}>{displayedText}</span>
         </div>
       </div>
       <motion.span

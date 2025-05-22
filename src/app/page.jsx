@@ -5,10 +5,13 @@ import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 
 export default function Home() {
   const words = [
-    { text: "Visual Storytellers", className: "!text-yellow-200 text-2xl" },
-    { text: "Digital Dreamers", className: "!text-yellow-200 text-2xl" },
-    { text: "Media Innovators", className: "!text-yellow-200 text-2xl" },
-    { text: "Creative Minds", className: "!text-yellow-200 text-2xl" },
+    {
+      text: "Visual Storytellers",
+      className: "text-yellow-200 text-2xl",
+    },
+    { text: "Digital Dreamers", className: "text-yellow-200 text-2xl" },
+    { text: "Media Innovators", className: "text-yellow-200 text-2xl" },
+    { text: "Creative Minds", className: "text-yellow-200 text-2xl" },
   ];
   const wordItems = [
     {
