@@ -1,13 +1,14 @@
 import Image from "next/image";
 // import { FlipWords } from "@/components/ui/flip-words";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
+import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 
 export default function Home() {
   const words = [
-    "Visual Storytellers",
-    "Digital Dreamers",
-    "Media Innovators",
-    "Creative Minds",
+    { text: "Visual Storytellers", className: "!text-yellow-200 text-2xl" },
+    { text: "Digital Dreamers", className: "!text-yellow-200 text-2xl" },
+    { text: "Media Innovators", className: "!text-yellow-200 text-2xl" },
+    { text: "Creative Minds", className: "!text-yellow-200 text-2xl" },
   ];
   const wordItems = [
     {
@@ -89,12 +90,13 @@ export default function Home() {
       <header className=" h-[4.3rem] pt-4 w-full p-2.5 fixed z-50">
         <nav className="bg-neutral-900 h-full w-full rounded-full px-4">
           <div className="w-full h-full flex flex-row justify-between items-center">
-            <div className="h-full flex flex-row space-x-0.5 items-center">
+            <div className="h-full flex flex-row space-x-1.5 items-center">
               <Image
-                src="/reshot-icon-yellow-flower-GLBAP6YNMU.svg"
+                src="/logo.svg"
                 alt="Creem Icon"
-                width={40}
-                height={40}
+                width={28}
+                height={28}
+                className="border-[1px] border-yellow-200 rounded-full"
               />
               <div className="text-white">Cadet Artistry Hub</div>
             </div>
@@ -157,16 +159,16 @@ export default function Home() {
           </span>
           <span className="flex items-start text-white"> For </span>
         </h1>
-        <div className="h-[4rem] flex justify-center items-center px-4">
-          <div className="text-2xl mx-auto font-normal ">
-            {/* <FlipWords
+
+        <div className="h-[5rem] flex justify-center items-center px-4">
+          {/* <FlipWords
               words={words}
               duration={3000}
               className="!text-yellow-200"
             />{" "} */}
+          <TypewriterEffectSmooth words={words} />
 
-            <br />
-          </div>
+          <br />
         </div>
       </div>
 
@@ -222,7 +224,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-20 grid grid-cols-1 gap-4 px-6">
+      <div className="mt-20 grid grid-cols-1 gap-2 px-6">
         <section className=" h-[30rem] w-full rounded-2xl [background-image:radial-gradient(88%_100%_at_top,rgba(255,255,255,0.5),rgba(255,255,255,0))] relative px-4 py-20 overflow-hidden">
           <div className="absolute inset-0 h-full w-full scale-[1.2] transform [mask-image:radial-gradient(#fff,transparent,75%)] opacity-10 bg-[url(https://www.creem.io/noise.webp)] bg-size-[30%]"></div>
           <div className="max-w-xs">
@@ -265,14 +267,52 @@ export default function Home() {
             </p>
             <div className="mt-6 bg-neutral-900/50 backdrop-blur-sm rounded-2xl p-6 border border-neutral-800">
               <div className="flex items-center justify-between mb-4">
-                <h3 className=""></h3>
+                <h3 className="text-sm font-medium text-neutral-200">
+                  Tax Report 2025
+                </h3>
+                <span className="px-2 py-1 text-xs font-medium text-emerald-500 bg-emerald-500/10 rounded-full">
+                  Submitted
+                </span>
+              </div>
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-neutral-400">VAT (EU)</span>
+                  <span className="text-sm font-medium text-white">
+                    €2,450.00
+                  </span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-neutral-400">
+                    Sales Tax (US)
+                  </span>
+                  <span className="text-sm font-medium text-white">
+                    $3,120.00{" "}
+                  </span>
+                </div>
               </div>
             </div>
           </div>
         </section>
+        <section className=" h-[30rem] w-full rounded-2xl [background-image:radial-gradient(88%_100%_at_top,rgba(255,255,255,0.5),rgba(255,255,255,0))] relative px-4 py-20 overflow-hidden">
+          <div className="absolute inset-0 h-full w-full scale-[1.2] transform [mask-image:radial-gradient(#fff,transparent,75%)] opacity-10 bg-[url(https://www.creem.io/noise.webp)] bg-size-[30%]"></div>
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black to-transparent pointer-events-none"></div>
+          <div className="relative w-full h-full py-8">
+            <div className="absolute -top-40 -left-40 w-[300px] h-[300px] bg-[radial-gradient(circle_at_top_left,_#FFBE98,_#FFA477)] rounded-full blur-[100px] opacity-20 z-20"></div>
+            <div className="absolute -bottom-52 -right-52 w-[400px] h-[400px] rounded-full blur-[100px] opacity-20 z-20"></div>
+            <div className="absolute top-0 w-[80%] h-64 bg-gradient-to-b from-[#FFBE98]/20 to-transparent blur-2xl z-20"></div>
+          </div>
+        </section>
       </div>
 
-      <div className="relative mt-20">
+      <div className="max-w-7xl mx-auto text-white relative z-10">
+        <div className="mb-16 text-center">
+          <h2 className="max-w-5xl mx-auto text-center tracking-tight font-medium text-white text-3xl md:text-5xl md:leading-tight mb-4"></h2>
+          <h2 className="text-sm md:text-base max-w-4xl my-4 mx-auto text-center font-normal dark:text-muted-dark text-gray-300"></h2>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"></div>
+      </div>
+
+      <footer className="relative mt-20">
         <div className="border-t border-neutral-800 px-8 pt-20 pb-32 relative bg-black z-0">
           <div className="absolute inset-0 -z-9 flex items-center justify-center overflow-hidden pointer-events-none bg-transparent">
             <p className="text-center text-5xl z-9 md:text-9xl lg:text-[18rem] font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-950 via-neutral-800 to-[#FFBE98]/30 select-none">
@@ -282,13 +322,13 @@ export default function Home() {
           <div className="max-w-7xl mx-auto text-sm text-neutral-400 flex sm:flex-row flex-col justify-between items-start z-0">
             <div>
               <div className="mr-4  md:flex mb-4 z-0">
-                <a className="font-normal flex space-x-1 items-center text-sm  text-blackpy-1  relative z-20">
+                <a className="font-normal flex space-x-2 items-center text-sm  text-blackpy-1  relative z-20">
                   <Image
-                    src="/reshot-icon-yellow-flower-GLBAP6YNMU.svg"
+                    src="/logo-sq.png"
                     alt="Creem Icon"
-                    width={40}
-                    height={40}
-                    className=""
+                    width={50}
+                    height={50}
+                    className=" rounded-lg"
                   />
                   <span className="font-medium text-white">
                     Cadet Artistry Hub
@@ -296,7 +336,7 @@ export default function Home() {
                 </a>
               </div>
               <div className="relative z-10">
-                Copyright © 2025 Cadet Artistry Hub OÜ
+                Copyright © 2025 Cadet Artistry Hub
               </div>
               <div className="mt-2 relative z-10">All rights reserved</div>
             </div>
@@ -346,7 +386,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </footer>
     </div>
   );
 }
