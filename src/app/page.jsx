@@ -663,14 +663,14 @@ export default function Home() {
                             className="border-[1px] border-yellow-200 mr-2 rounded-full"
                           />
                           <div>
-                            <div class="text-sm text-white">
+                            <div className="text-sm text-white">
                               Alec Erasmus purchased
                             </div>
-                            <div class="text-xs text-gray-300">
+                            <div className="text-xs text-gray-300">
                               AI Headshots Plus
                             </div>
                           </div>
-                          <div class="ml-auto text-green-400 font-medium">
+                          <div className="ml-auto text-green-400 font-medium">
                             +$35.00
                           </div>
                         </div>
