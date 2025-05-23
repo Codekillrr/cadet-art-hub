@@ -1,8 +1,25 @@
 import Image from "next/image";
+import * as React from "react";
+import classNames from "classnames";
+
 // import { FlipWords } from "@/components/ui/flip-words";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 import { VerticalMovingCards } from "@/components/ui/vertical-moving-cards";
+import { Feature } from "@/components/ui/feature-card";
+import { Accordion } from "radix-ui";
+import { ChevronDownIcon } from "@radix-ui/react-icons";
+
+import {
+  IconAdjustmentsBolt,
+  IconCloud,
+  IconCurrencyDollar,
+  IconEaseInOut,
+  IconHeart,
+  IconHelp,
+  IconRouteAltLeft,
+  IconTerminal2,
+} from "@tabler/icons-react";
 
 export default function Home() {
   const words = [
@@ -88,7 +105,6 @@ export default function Home() {
       imgsrc: "/carousel icons/icon1.svg",
     },
   ];
-
   const testimonials = [
     {
       quote:
@@ -120,6 +136,55 @@ export default function Home() {
       title: "Moby-Dick",
     },
   ];
+  const features = [
+    {
+      title: "Built for developers",
+      description:
+        "Built for engineers, developers, dreamers, thinkers and doers.",
+      icon: <IconTerminal2 />,
+    },
+    {
+      title: "Ease of use",
+      description:
+        "It's as easy as using an Apple, and as expensive as buying one.",
+      icon: <IconEaseInOut />,
+    },
+    {
+      title: "Pricing like no other",
+      description:
+        "Our prices are best in the market. No cap, no lock, no credit card required.",
+      icon: <IconCurrencyDollar />,
+    },
+    {
+      title: "100% Uptime guarantee",
+      description: "We just cannot be taken down by anyone.",
+      icon: <IconCloud />,
+    },
+    {
+      title: "Multi-tenant Architecture",
+      description: "You can simply share passwords instead of buying new seats",
+      icon: <IconRouteAltLeft />,
+    },
+    {
+      title: "24/7 Customer Support",
+      description:
+        "We are available a 100% of the time. Atleast our AI Agents are.",
+      icon: <IconHelp />,
+    },
+    {
+      title: "Money back guarantee",
+      description:
+        "If you donot like EveryAI, we will convince you to like us.",
+      icon: <IconAdjustmentsBolt />,
+    },
+    {
+      title: "And everything else",
+      description: "I just ran out of copy ideas. Accept my sincere apologies",
+      icon: <IconHeart />,
+    },
+  ];
+  const defaultContent =
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
 
   return (
     <div className="absolute w-full h-full overflow-auto">
@@ -155,7 +220,8 @@ export default function Home() {
           </div>
         </nav>
       </header>
-      <div className="mt-[4.7rem]">
+
+      <div className="mt-[5rem]">
         <div className="flex justify-center m-2 mb-0">
           <button className="bg-neutral-800  border-neutral-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-700 rounded-full p-px text-[0.6rem] font-semibold leading-6  text-white inline-block">
             <span className="absolute inset-0 overflow-hidden rounded-full">
@@ -278,7 +344,7 @@ export default function Home() {
           <InfiniteMovingCards
             items={wordItems}
             direction="left"
-            speed="normal"
+            speed="slow"
             className="my-5 mx-2"
           />
           <Image
@@ -329,23 +395,291 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className=" h-[30rem] w-full rounded-2xl [background-image:radial-gradient(88%_100%_at_top,rgba(255,255,255,0.5),rgba(255,255,255,0))] relative px-4 py-20 overflow-hidden">
+        <section className=" h-auto w-full rounded-2xl [background-image:radial-gradient(88%_100%_at_top,rgba(255,255,255,0.5),rgba(255,255,255,0))] relative px-4 py-20 overflow-hidden">
           <div className="absolute inset-0 h-full w-full scale-[1.2] transform [mask-image:radial-gradient(#fff,transparent,75%)] opacity-10 bg-[url(https://www.creem.io/noise.webp)] bg-size-[30%]"></div>
           <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black to-transparent pointer-events-none"></div>
           <div className="relative w-full h-full py-8">
             <div className="absolute -top-40 -left-40 w-[300px] h-[300px] bg-[radial-gradient(circle_at_top_left,_#FFBE98,_#FFA477)] rounded-full blur-[100px] opacity-20 z-20"></div>
             <div className="absolute -bottom-52 -right-52 w-[400px] h-[400px] rounded-full blur-[100px] opacity-20 z-20"></div>
             <div className="absolute top-0 w-[80%] h-64 bg-gradient-to-b from-[#FFBE98]/20 to-transparent blur-2xl z-20"></div>
+            <div className="relative grid md:grid-cols-2 gap-12 z-30 h-full">
+              <div className="space-y-6">
+                <div className="">
+                  <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+                    <span className="bg-gradient-to-r from-[#FFBE98] to-[#FFA477] bg-clip-text text-transparent">
+                      Global Presence,
+                    </span>
+                    <br />
+                    <span className="text-white">Local Excellence</span>
+                  </h2>
+                  <p className="mt-4 text-gray-300 text-lg">
+                    Empowering teams across the globe to scale without
+                    boundaries
+                  </p>
+                </div>
+                <div className="flex items-center space-x-5 p-6 rounded-2xl bg-black/40 backdrop-blur-md border border-white/5">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-earth w-10 h-10 text-[#FFBE98]"
+                  >
+                    <path d="M21.54 15H17a2 2 0 0 0-2 2v4.54"></path>
+                    <path d="M7 3.34V5a3 3 0 0 0 3 3a2 2 0 0 1 2 2c0 1.1.9 2 2 2a2 2 0 0 0 2-2c0-1.1.9-2 2-2h3.17"></path>
+                    <path d="M11 21.95V18a2 2 0 0 0-2-2a2 2 0 0 1-2-2v-1a2 2 0 0 0-2-2H2.05"></path>
+                    <circle cx="12" cy="12" r="10"></circle>
+                  </svg>
+                  <div className="">
+                    <h3 className="font-semibold text-xl text-white">
+                      Borderless Operations
+                    </h3>
+                    <p className="text-gray-300">
+                      Scale your business globally with seamless integration
+                    </p>
+                  </div>
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="text-center p-6 rounded-2xl bg-black/40 backdrop-blur-md border border-white/5">
+                    <div className="text-3xl font-bold text-[#FFBE98]">
+                      100+
+                    </div>
+                    <div className="text-gray-300 mt-1">
+                      Countries Supported
+                    </div>
+                  </div>
+                  <div className="text-center p-6 rounded-2xl bg-black/40 backdrop-blur-md border border-white/5">
+                    <div className="text-3xl font-bold text-[#FFBE98]">
+                      24/7
+                    </div>
+                    <div className="text-gray-300 mt-1">Global Support</div>
+                  </div>
+                </div>
+              </div>
+              <div className="relative h-full flex items-center">
+                <div className="grid grid-cols-3 gap-4 w-full">
+                  <div className="group relative">
+                    <div className="aspect-video relative rounded-xl overflow-hidden bg-black/40 backdrop-blur-md border border-white/10 shadow-lg">
+                      <Image
+                        src="https://flagcdn.com/w320/us.png"
+                        alt="United States flag"
+                        fill
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60"></div>
+                    </div>
+                  </div>
+                  <div className="group relative">
+                    <div className="aspect-video relative rounded-xl overflow-hidden bg-black/40 backdrop-blur-md border border-white/10 shadow-lg">
+                      <Image
+                        src="https://flagcdn.com/w320/br.png"
+                        alt="United States flag"
+                        fill
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60"></div>
+                    </div>
+                  </div>{" "}
+                  <div className="group relative">
+                    <div className="aspect-video relative rounded-xl overflow-hidden bg-black/40 backdrop-blur-md border border-white/10 shadow-lg">
+                      <Image
+                        src="https://flagcdn.com/w320/ca.png"
+                        alt="United States flag"
+                        fill
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60"></div>
+                    </div>
+                  </div>{" "}
+                  <div className="group relative">
+                    <div className="aspect-video relative rounded-xl overflow-hidden bg-black/40 backdrop-blur-md border border-white/10 shadow-lg">
+                      <Image
+                        src="https://flagcdn.com/w320/de.png"
+                        alt="United States flag"
+                        fill
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60"></div>
+                    </div>
+                  </div>{" "}
+                  <div className="group relative">
+                    <div className="aspect-video relative rounded-xl overflow-hidden bg-black/40 backdrop-blur-md border border-white/10 shadow-lg">
+                      <Image
+                        src="https://flagcdn.com/w320/in.png"
+                        alt="United States flag"
+                        fill
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60"></div>
+                    </div>
+                  </div>{" "}
+                  <div className="group relative">
+                    <div className="aspect-video relative rounded-xl overflow-hidden bg-black/40 backdrop-blur-md border border-white/10 shadow-lg">
+                      <Image
+                        src="https://flagcdn.com/w320/gb.png"
+                        alt="United States flag"
+                        fill
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60"></div>
+                    </div>
+                  </div>{" "}
+                  <div className="group relative">
+                    <div className="aspect-video relative rounded-xl overflow-hidden bg-black/40 backdrop-blur-md border border-white/10 shadow-lg">
+                      <Image
+                        src="https://flagcdn.com/w320/cn.png"
+                        alt="United States flag"
+                        fill
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60"></div>
+                    </div>
+                  </div>{" "}
+                  <div className="group relative">
+                    <div className="aspect-video relative rounded-xl overflow-hidden bg-black/40 backdrop-blur-md border border-white/10 shadow-lg">
+                      <Image
+                        src="https://flagcdn.com/w320/jp.png"
+                        alt="United States flag"
+                        fill
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60"></div>
+                    </div>
+                  </div>{" "}
+                  <div className="group relative">
+                    <div className="aspect-video relative rounded-xl overflow-hidden bg-black/40 backdrop-blur-md border border-white/10 shadow-lg">
+                      <Image
+                        src="https://flagcdn.com/w320/kr.png"
+                        alt="United States flag"
+                        fill
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60"></div>
+                    </div>
+                  </div>{" "}
+                  <div className="group relative">
+                    <div className="aspect-video relative rounded-xl overflow-hidden bg-black/40 backdrop-blur-md border border-white/10 shadow-lg">
+                      <Image
+                        src="https://flagcdn.com/w320/sg.png"
+                        alt="United States flag"
+                        fill
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60"></div>
+                    </div>
+                  </div>{" "}
+                  <div className="group relative">
+                    <div className="aspect-video relative rounded-xl overflow-hidden bg-black/40 backdrop-blur-md border border-white/10 shadow-lg">
+                      <Image
+                        src="https://flagcdn.com/w320/au.png"
+                        alt="United States flag"
+                        fill
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60"></div>
+                    </div>
+                  </div>{" "}
+                  <div className="group relative">
+                    <div className="aspect-video relative rounded-xl overflow-hidden bg-black/40 backdrop-blur-md border border-white/10 shadow-lg">
+                      <Image
+                        src="https://flagcdn.com/w320/za.png"
+                        alt="United States flag"
+                        fill
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </div>
 
       <div className="max-w-7xl mx-auto text-white relative z-10">
         <div className="mb-16 text-center">
-          <h2 className="max-w-5xl mx-auto text-center tracking-tight font-medium text-white text-3xl md:text-5xl md:leading-tight mb-4"></h2>
-          <h2 className="text-sm md:text-base max-w-4xl my-4 mx-auto text-center font-normal dark:text-muted-dark text-gray-300"></h2>
+          <h2 className="max-w-5xl mx-auto text-center tracking-tight font-medium text-white text-3xl md:text-5xl md:leading-tight mb-4">
+            <span className="inline-block items-center text-balance">
+              Smooth International Sales
+            </span>
+          </h2>
+          <h2 className="text-sm md:text-base max-w-4xl my-4 px-10 mx-auto text-center font-normal dark:text-muted-dark text-gray-300">
+            <span className="inline-block items-center text-balance">
+              Everything you need to handle payments for your SaaS business{" "}
+            </span>
+          </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"></div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <Accordion.Root
+            className="accordion-root w-[90%] flex flex-col justify-center mx-4"
+            type="single"
+            defaultValue="item-1"
+            collapsible
+          >
+            <Accordion.Item
+              className="accordion-item w-full border-b-[1px] border-b-gray-600  active:bg-neutral-900/50 cursor-pointer border-gray-800 overflow-hidden rounded-sm"
+              value="item-1"
+            >
+              <AccordionTrigger className="flex-row w-full flex items-center justify-between py-4 px-4 text-left focus:outline-none">
+                <div className="flex items-center py-3">
+                  <span className="text-sm text-primary mr-3">01</span>
+                  <h3 className="text-xl font-medium relative ">
+                    Global tax compliance
+                  </h3>
+                </div>
+              </AccordionTrigger>
+              <AccordionContent>
+                Yes. It adheres to the WAI-ARIA design pattern.
+              </AccordionContent>
+            </Accordion.Item>
+
+            <Accordion.Item className="accordion-item" value="item-2">
+              <AccordionTrigger>Is it unstyled?</AccordionTrigger>
+              <AccordionContent>
+                Yes. It's unstyled by default, giving you freedom over the look
+                and feel.
+              </AccordionContent>
+            </Accordion.Item>
+
+            <Accordion.Item className="accordion-item" value="item-3">
+              <AccordionTrigger>Can it be animated?</AccordionTrigger>
+              <AccordionContent>
+                Yes! You can animate the Accordion with CSS or JavaScript.
+              </AccordionContent>
+            </Accordion.Item>
+          </Accordion.Root>
+        </div>
+      </div>
+
+      <div className="mx-4 relative z-20 py-10 md:py-40">
+        <h2 className="max-w-5xl mx-auto text-center tracking-tight font-medium text-white text-3xl md:text-5xl md:leading-tight">
+          <span className="inline-block items-center text-balance">
+            Tools for the next generation of companies
+          </span>
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  relative z-10 py-10 max-w-7xl mx-auto">
+          {features.map((feature, index) => (
+            <Feature key={feature.title} {...feature} index={index} />
+          ))}
+        </div>
       </div>
 
       <div className="relative z-20 pt-0 pb-40">
@@ -360,7 +694,7 @@ export default function Home() {
             of them have to say.
           </span>
         </h2>
-        <div className="h-[40rem] my-20 rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+        <div className="h-[40rem] my-20 rounded-md flex flex-col antialiased bg-black bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
           <VerticalMovingCards
             items={testimonials}
             direction="up"
@@ -456,3 +790,32 @@ export default function Home() {
     </div>
   );
 }
+
+const AccordionTrigger = React.forwardRef(
+  ({ children, className, ...props }, forwardedRef) => (
+    <Accordion.Header className="accordion-header">
+      <Accordion.Trigger
+        className={classNames("accordion-trigger", className)}
+        {...props}
+        ref={forwardedRef}
+      >
+        {children}
+        <ChevronDownIcon className="accordion-chevron" aria-hidden />
+      </Accordion.Trigger>
+    </Accordion.Header>
+  )
+);
+AccordionTrigger.displayName = "AccordionTrigger";
+
+const AccordionContent = React.forwardRef(
+  ({ children, className, ...props }, forwardedRef) => (
+    <Accordion.Content
+      className={classNames("accordion-content", className)}
+      {...props}
+      ref={forwardedRef}
+    >
+      <div className="accordion-content-text">{children}</div>
+    </Accordion.Content>
+  )
+);
+AccordionContent.displayName = "AccordionContent";
