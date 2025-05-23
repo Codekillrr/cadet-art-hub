@@ -183,8 +183,6 @@ export default function Home() {
       icon: <IconHeart />,
     },
   ];
-  const defaultContent =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
 
   return (
     <div className="absolute w-full h-full overflow-auto">
@@ -615,7 +613,7 @@ export default function Home() {
       </div>
 
       <div className="max-w-7xl mx-auto text-white relative z-10">
-        <div className="mb-16 text-center">
+        <div className="mb-14 text-center">
           <h2 className="max-w-5xl mx-auto text-center tracking-tight font-medium text-white text-3xl md:text-5xl md:leading-tight mb-4">
             <span className="inline-block items-center text-balance">
               Smooth International Sales
@@ -627,7 +625,7 @@ export default function Home() {
             </span>
           </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center">
           <Accordion.Root
             className="accordion-root w-[90%] flex flex-col justify-center mx-4"
             type="single"
@@ -635,7 +633,7 @@ export default function Home() {
             collapsible
           >
             <Accordion.Item
-              className="accordion-item w-full border-b-[1px] border-b-gray-600  active:bg-neutral-900/50 cursor-pointer border-gray-800 overflow-hidden rounded-sm"
+              className="accordion-item w-full  active:bg-neutral-900/50 cursor-pointer border-gray-800 overflow-hidden rounded-md"
               value="item-1"
             >
               <AccordionTrigger className="flex-row w-full flex items-center justify-between py-4 px-4 text-left focus:outline-none">
@@ -647,29 +645,163 @@ export default function Home() {
                 </div>
               </AccordionTrigger>
               <AccordionContent>
-                Yes. It adheres to the WAI-ARIA design pattern.
+                <div className="py-4 px-4 pr-6">
+                  <p className="text-gray-300 relative">
+                    We're your merchant of record. That means we handle
+                    payments, merchant fees, fraud and sales tax without you
+                    lifting a finger.
+                  </p>
+                  <div className="md:hidden relative overflow-hidden mt-6 bg-neutral-900/40 border border-neutral-800/40 rounded-lg p-4">
+                    <div className="p-6 rounded-lg w-full relative space-y-8">
+                      <div className="border-[1px] background-blur rounded-lg shadow-md p-4 relative">
+                        <div className="flex items-center">
+                          <Image
+                            src="/logo.svg"
+                            alt="Creem Icon"
+                            width={25}
+                            height={25}
+                            className="border-[1px] border-yellow-200 mr-2 rounded-full"
+                          />
+                          <div>
+                            <div class="text-sm text-white">
+                              Alec Erasmus purchased
+                            </div>
+                            <div class="text-xs text-gray-300">
+                              AI Headshots Plus
+                            </div>
+                          </div>
+                          <div class="ml-auto text-green-400 font-medium">
+                            +$35.00
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="absolute w-full h-full squarePattern top-0 left-0"></div>
+                    <div class="absolute -top-40 -left-40 w-[300px] h-[300px] bg-[radial-gradient(circle_at_top_left,_#FFBD98,_#FFA477)] rounded-full blur-[100px] opacity-10 z-20"></div>
+                    <div class="absolute -bottom-52 -right-52 w-[400px] h-[400px] bg-[radial-gradient(circle_at_bottom_right,_#FFA477,_#FFBD98)] rounded-full blur-[100px] opacity-15 z-20"></div>
+                    <div class="absolute top-0 w-[80%] h-64 bg-gradient-to-b from-white/20 to-transparent blur-2xl z-20"></div>
+                  </div>
+                </div>
               </AccordionContent>
+              <div className="flex justify-center">
+                <div className="shrink-0 bg-gray-600 h-[1px] w-11/12"></div>
+              </div>
             </Accordion.Item>
-
-            <Accordion.Item className="accordion-item" value="item-2">
-              <AccordionTrigger>Is it unstyled?</AccordionTrigger>
+            <Accordion.Item
+              className="accordion-item w-full  active:bg-neutral-900/50 cursor-pointer border-gray-800 overflow-hidden rounded-md"
+              value="item-2"
+            >
+              <AccordionTrigger className="flex-row w-full flex items-center justify-between py-4 px-4 text-left focus:outline-none">
+                <div className="flex items-center py-3">
+                  <span className="text-sm text-primary mr-3">01</span>
+                  <h3 className="text-xl font-medium relative ">
+                    Global tax compliance
+                  </h3>
+                </div>
+              </AccordionTrigger>
               <AccordionContent>
-                Yes. It's unstyled by default, giving you freedom over the look
-                and feel.
+                <div className="py-4 px-4 pr-6">
+                  <p className="text-gray-300 relative">
+                    We're your merchant of record. That means we handle
+                    payments, merchant fees, fraud and sales tax without you
+                    lifting a finger.
+                  </p>
+                  <div className="md:hidden relative overflow-hidden mt-6 bg-neutral-900/40 border border-neutral-800/40 rounded-lg p-4">
+                    <div className="p-6 rounded-lg w-full relative space-y-8">
+                      <div className="border-[1px] background-blur rounded-lg shadow-md p-4 relative">
+                        <div className="flex items-center">
+                          <Image
+                            src="/logo.svg"
+                            alt="Creem Icon"
+                            width={25}
+                            height={25}
+                            className="border-[1px] border-yellow-200 mr-2 rounded-full"
+                          />
+                          <div>
+                            <div class="text-sm text-white">
+                              Alec Erasmus purchased
+                            </div>
+                            <div class="text-xs text-gray-300">
+                              AI Headshots Plus
+                            </div>
+                          </div>
+                          <div class="ml-auto text-green-400 font-medium">
+                            +$35.00
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="absolute w-full h-full squarePattern top-0 left-0"></div>
+                    <div class="absolute -top-40 -left-40 w-[300px] h-[300px] bg-[radial-gradient(circle_at_top_left,_#FFBD98,_#FFA477)] rounded-full blur-[100px] opacity-10 z-20"></div>
+                    <div class="absolute -bottom-52 -right-52 w-[400px] h-[400px] bg-[radial-gradient(circle_at_bottom_right,_#FFA477,_#FFBD98)] rounded-full blur-[100px] opacity-15 z-20"></div>
+                    <div class="absolute top-0 w-[80%] h-64 bg-gradient-to-b from-white/20 to-transparent blur-2xl z-20"></div>
+                  </div>
+                </div>
               </AccordionContent>
+              <div className="flex justify-center">
+                <div className="shrink-0 bg-gray-600 h-[1px] w-11/12"></div>
+              </div>
             </Accordion.Item>
-
-            <Accordion.Item className="accordion-item" value="item-3">
-              <AccordionTrigger>Can it be animated?</AccordionTrigger>
+            <Accordion.Item
+              className="accordion-item w-full  active:bg-neutral-900/50 cursor-pointer border-gray-800 overflow-hidden rounded-md"
+              value="item-3"
+            >
+              <AccordionTrigger className="flex-row w-full flex items-center justify-between py-4 px-4 text-left focus:outline-none">
+                <div className="flex items-center py-3">
+                  <span className="text-sm text-primary mr-3">01</span>
+                  <h3 className="text-xl font-medium relative ">
+                    Global tax compliance
+                  </h3>
+                </div>
+              </AccordionTrigger>
               <AccordionContent>
-                Yes! You can animate the Accordion with CSS or JavaScript.
+                <div className="py-4 px-4 pr-6">
+                  <p className="text-gray-300 relative">
+                    We're your merchant of record. That means we handle
+                    payments, merchant fees, fraud and sales tax without you
+                    lifting a finger.
+                  </p>
+                  <div className="md:hidden relative overflow-hidden mt-6 bg-neutral-900/40 border border-neutral-800/40 rounded-lg p-4">
+                    <div className="p-6 rounded-lg w-full relative space-y-8">
+                      <div className="border-[1px] background-blur rounded-lg shadow-md p-4 relative">
+                        <div className="flex items-center">
+                          <Image
+                            src="/logo.svg"
+                            alt="Creem Icon"
+                            width={25}
+                            height={25}
+                            className="border-[1px] border-yellow-200 mr-2 rounded-full"
+                          />
+                          <div>
+                            <div class="text-sm text-white">
+                              Alec Erasmus purchased
+                            </div>
+                            <div class="text-xs text-gray-300">
+                              AI Headshots Plus
+                            </div>
+                          </div>
+                          <div class="ml-auto text-green-400 font-medium">
+                            +$35.00
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="absolute w-full h-full squarePattern top-0 left-0"></div>
+                    <div class="absolute -top-40 -left-40 w-[300px] h-[300px] bg-[radial-gradient(circle_at_top_left,_#FFBD98,_#FFA477)] rounded-full blur-[100px] opacity-10 z-20"></div>
+                    <div class="absolute -bottom-52 -right-52 w-[400px] h-[400px] bg-[radial-gradient(circle_at_bottom_right,_#FFA477,_#FFBD98)] rounded-full blur-[100px] opacity-15 z-20"></div>
+                    <div class="absolute top-0 w-[80%] h-64 bg-gradient-to-b from-white/20 to-transparent blur-2xl z-20"></div>
+                  </div>
+                </div>
               </AccordionContent>
+              <div className="flex justify-center">
+                <div className="shrink-0 bg-gray-600 h-[1px] w-11/12"></div>
+              </div>
             </Accordion.Item>
           </Accordion.Root>
         </div>
       </div>
 
-      <div className="mx-4 relative z-20 py-10 md:py-40">
+      <div className="mx-4 mt-15 relative z-20 py-10 md:py-40">
         <h2 className="max-w-5xl mx-auto text-center tracking-tight font-medium text-white text-3xl md:text-5xl md:leading-tight">
           <span className="inline-block items-center text-balance">
             Tools for the next generation of companies
@@ -703,6 +835,27 @@ export default function Home() {
         </div>
       </div>
 
+      <div className="relative">
+        <section className=" pb-40 w-full  overflow-hidden relative z-30">
+          <div className="mx-auto w-full relative z-20 sm:max-w-[40rem]  md:max-w-[48rem] lg:max-w-[64rem] xl:max-w-[80rem] bg-gradient-to-br from-neutral-900 to-black sm:rounded-2xl">
+            <div className="relative -mx-6   sm:mx-0 sm:rounded-2xl overflow-hidden px-6  md:px-8 ">
+              <div className="absolute inset-0 w-full h-full opacity-10 bg-noise fade-vignette [mask-image:radial-gradient(#fff,transparent,75%)]"></div>
+              <div class="pointer-events-none absolute inset-y-0 right-0 select-none overflow-hidden rounded-2xl"></div>{" "}
+              {/* style="mask:radial-gradient(33.875rem 33.875rem at calc(100% - 8.9375rem) 0, white 3%, transparent 70%)" */}
+              <div className="relative px-6 pb-14 pt-20 sm:px-10 sm:pb-20 lg:px-[4.5rem]">
+                <h2 class="text-center text-balance mx-auto text-3xl md:text-5xl font-semibold tracking-[-0.015em] text-white">
+                  Ready to build the future?
+                </h2>
+                <p className="mt-4 max-w-[26rem] text-center mx-auto text-base/6 text-neutral-200">
+                  Join the next generation of efficient teams. <br /> Get
+                  started with Creem's Financial OS today.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
       <footer className="relative mt-20">
         <div className="border-t border-neutral-800 px-8 pt-20 pb-32 relative bg-black z-0">
           <div className="absolute inset-0 -z-9 flex items-center justify-center  pointer-events-none bg-transparent">
@@ -715,9 +868,9 @@ export default function Home() {
                 className="object-cover z-10 opacity-20 h-full"
               />
             </div>
-            <p className="text-center text-5xl z-9 md:text-9xl lg:text-[18rem] font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-950 via-neutral-800 to-[#FFBE98]/30 select-none">
+            {/* <p className="text-center text-5xl z-9 md:text-9xl lg:text-[18rem] font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-950 via-neutral-800 to-[#FFBE98]/30 select-none">
               CADET ART HUB
-            </p>
+            </p> */}
           </div>
           <div className="max-w-7xl mx-auto text-sm text-neutral-400 flex sm:flex-row flex-col justify-between items-start z-0">
             <div>
