@@ -206,9 +206,15 @@ export default function Home() {
         <NavBar />
       </header>
 
+      {/* <div className="absolute top-0 w-full h-screen overflow-hidden">
+        <div className="absolute  inset-0 transform"> */}
+
+      {/* </div>
+      </div> */}
+
       <div className="pt-[5rem] relative [font-family:var(--tech)] font-bold">
         <video
-          className="absolute top-0 left-0 w-full h-full object-cover object-[37%_center] z-[-1] pointer-events-none opacity-50 mix-blend-screen"
+          className="absolute transform top-[-13.5%] left-10 w-full h-full object-contain scale-262 overflow-hidden object-[37%_center] z-[-1] pointer-events-none opacity-50 mix-blend-screen"
           autoPlay
           loop
           muted
