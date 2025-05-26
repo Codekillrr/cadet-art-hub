@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import NavBar from "@/components/NavBar";
 import Button1 from "@/components/Button1";
 import GlowTittle from "@/components/GlowTittle";
+import Button2 from "@/components/Button2";
 
 // import { FlipWords } from "@/components/ui/flip-words";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
@@ -201,13 +202,13 @@ export default function Home() {
         <source src="/videos/bgvid.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video> */}
-      <header className=" h-[4.4rem] pt-4 w-full p-2.5 fixed z-50">
+      <header className=" h-[4.6rem] pt-4 w-full p-2.5 fixed z-50">
         <NavBar />
       </header>
 
       <div className="pt-[5rem] relative [font-family:var(--tech)] font-bold">
         <video
-          className="absolute top-0 left-0 w-full h-full object-cover z-[-1] pointer-events-none opacity-30 mix-blend-screen"
+          className="absolute top-0 left-0 w-full h-full object-cover z-[-1] pointer-events-none opacity-50 mix-blend-screen"
           autoPlay
           loop
           muted
@@ -265,12 +266,7 @@ export default function Home() {
         </div>
 
         <div className="mt-4 flex justify-evenly mx-4">
-          <button className="relative inline-flex h-8 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-neutral-400 focus:ring-offset-2 focus:ring-offset-neutral-50">
-            <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-            <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-neutral-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
-              Get Started For Free 🍦
-            </span>
-          </button>
+          <Button2 label={"Get Started For Free 🍦"} />
           <button className="px-8 py-2  bg-transparent text-white text-sm rounded-md font-semibold hover:bg-black/[0.8] hover:shadow-lg">
             <span className="flex flex-row items-center">
               Contact Us
@@ -304,7 +300,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-20 grid grid-cols-1 gap-2 px-6">
+      <div className="mt-20 grid grid-cols-1 gap-2 px-6 [font-family:var(--tech)]">
         <section className=" h-[30rem] w-full rounded-2xl [background-image:radial-gradient(88%_100%_at_top,rgba(255,255,255,0.5),rgba(255,255,255,0))] relative px-4 py-20 overflow-hidden">
           <div className="absolute inset-0 h-full w-full scale-[1.2] transform [mask-image:radial-gradient(#fff,transparent,75%)] opacity-10 bg-[url(https://www.creem.io/noise.webp)] bg-size-[30%]"></div>
           <div className="max-w-xs">
@@ -592,7 +588,7 @@ export default function Home() {
         </section>
       </div>
 
-      <div className="max-w-7xl mx-auto text-white relative z-10">
+      <div className="max-w-7xl mx-auto text-white relative z-10 [font-family:var(--tech)]">
         <div className="mb-14 text-center">
           <h2 className="max-w-5xl mx-auto text-center tracking-tight font-medium text-white text-3xl md:text-5xl md:leading-tight mb-4">
             <span className="inline-block items-center text-balance">
@@ -607,7 +603,7 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center">
           <Accordion.Root
-            className="accordion-root w-[90%] flex flex-col justify-center mx-4"
+            className="accordion-root w-[100%] flex flex-col justify-center"
             type="single"
             defaultValue="item-1"
             collapsible
@@ -781,7 +777,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mx-4 mt-15 relative z-20 py-10 md:py-40">
+      <div className="mx-4 mt-15 relative z-20 py-10 md:py-40 [font-family:var(--tech)]">
         <h2 className="max-w-5xl mx-auto text-center tracking-tight font-medium text-white text-3xl md:text-5xl md:leading-tight">
           <span className="inline-block items-center text-balance">
             Tools for the next generation of companies
@@ -794,7 +790,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="relative z-20 pt-0 pb-40">
+      <div className="relative z-20 pt-0 pb-40 [font-family:var(--tech)]">
         <h2 className="max-w-5xl mx-auto text-center tracking-tight font-medium text-white text-3xl md:text-5xl md:leading-tight">
           <span className="inline-block items-center text-balance">
             Loved by Indie Hackers and VC Backed SaaS
@@ -816,12 +812,13 @@ export default function Home() {
       </div>
 
       <div className="relative">
-        <section className=" pb-40 w-full  overflow-hidden relative z-30">
+        <section className=" pb-40 w-full  overflow-hidden relative z-30 [font-family:var(--tech)]">
           <div className="mx-auto w-full relative z-20 sm:max-w-[40rem]  md:max-w-[48rem] lg:max-w-[64rem] xl:max-w-[80rem] bg-gradient-to-br from-neutral-900 to-black sm:rounded-2xl">
             <div className="relative -mx-6   sm:mx-0 sm:rounded-2xl overflow-hidden px-6  md:px-8 ">
               <div className="absolute inset-0 w-full h-full opacity-10 bg-noise fade-vignette [mask-image:radial-gradient(#fff,transparent,75%)]"></div>
               <div class="pointer-events-none absolute inset-y-0 right-0 select-none overflow-hidden rounded-2xl"></div>{" "}
               {/* style="mask:radial-gradient(33.875rem 33.875rem at calc(100% - 8.9375rem) 0, white 3%, transparent 70%)" */}
+              <div className="absolute inset-0 h-full w-full scale-[1.2] transform [mask-image:radial-gradient(#fff,transparent,75%)] opacity-5 bg-[url(https://www.creem.io/noise.webp)] bg-size-[30%]"></div>
               <div className="relative px-6 pb-14 pt-20 sm:px-10 sm:pb-20 lg:px-[4.5rem]">
                 <h2 class="text-center text-balance mx-auto text-3xl md:text-5xl font-semibold tracking-[-0.015em] text-white">
                   Ready to build the future?
@@ -830,13 +827,16 @@ export default function Home() {
                   Join the next generation of efficient teams. <br /> Get
                   started with Creem's Financial OS today.
                 </p>
+                <div className="w-full flex justify-center mt-6">
+                  <Button2 label={"Im Ready! >"} />
+                </div>
               </div>
             </div>
           </div>
         </section>
       </div>
 
-      <footer className="relative mt-20">
+      <footer className="relative mt-20 [font-family:var(--tech)]">
         <div className="border-t border-neutral-800 px-8 pt-20 pb-32 relative bg-black z-0">
           <div className="absolute inset-0 -z-9 flex items-center justify-center  pointer-events-none bg-transparent">
             <div className="h-full w-auto absolute left-0 inset-0 z-0">
