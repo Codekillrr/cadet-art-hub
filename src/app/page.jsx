@@ -208,7 +208,7 @@ export default function Home() {
 
       <div className="pt-[5rem] relative [font-family:var(--tech)] font-bold">
         <video
-          className="absolute top-0 left-0 w-full h-full object-cover z-[-1] pointer-events-none opacity-50 mix-blend-screen"
+          className="absolute top-0 left-0 w-full h-full object-cover object-[37%_center] z-[-1] pointer-events-none opacity-50 mix-blend-screen"
           autoPlay
           loop
           muted
