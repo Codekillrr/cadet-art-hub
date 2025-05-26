@@ -869,7 +869,7 @@ export default function Home() {
                 </a>
               </div>
               <div className="relative z-10">
-                Copyright © 2025 Cadet Artistry Hub
+                Copyright © 2025 Ibadullah Memon
               </div>
               <div className="mt-2 relative z-10">All rights reserved</div>
             </div>
