@@ -621,7 +621,7 @@ export default function Home() {
                 </div>
               </AccordionTrigger>
               <AccordionContent>
-                <div className="py-4 px-4 pr-6">
+                <div className="py-4 px-4">
                   <p className="text-gray-300 relative">
                     We're your merchant of record. That means we handle
                     payments, merchant fees, fraud and sales tax without you
@@ -676,7 +676,7 @@ export default function Home() {
                 </div>
               </AccordionTrigger>
               <AccordionContent>
-                <div className="py-4 px-4 pr-6">
+                <div className="py-4 px-4">
                   <p className="text-gray-300 relative">
                     We're your merchant of record. That means we handle
                     payments, merchant fees, fraud and sales tax without you
@@ -731,7 +731,7 @@ export default function Home() {
                 </div>
               </AccordionTrigger>
               <AccordionContent>
-                <div className="py-4 px-4 pr-6">
+                <div className="py-4 px-4">
                   <p className="text-gray-300 relative">
                     We're your merchant of record. That means we handle
                     payments, merchant fees, fraud and sales tax without you
