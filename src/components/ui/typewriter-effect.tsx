@@ -120,9 +120,9 @@ export const TypewriterEffectSmooth = ({
   useEffect(() => {
     if (!isInView) return;
 
-    const typingSpeed = 150; // ms per character when typing
+    const typingSpeed = 50; // ms per character when typing
     const deletingSpeed = 75; // ms per character when deleting
-    const delayAfterWord = 1000; // ms to wait after word is fully typed
+    const delayAfterWord = 2000; // ms to wait after word is fully typed
 
     let timeout: NodeJS.Timeout;
 
@@ -168,7 +168,9 @@ export const TypewriterEffectSmooth = ({
             whiteSpace: "nowrap",
           }}
         >
-          <span className={cn(``, currentWord.className)}>{displayedText}</span>
+          <span className={cn(`!text-white`, currentWord.className)}>
+            {displayedText}
+          </span>
         </div>
       </div>
       <motion.span
@@ -184,7 +186,7 @@ export const TypewriterEffectSmooth = ({
           repeatType: "reverse",
         }}
         className={cn(
-          "block rounded-sm w-[4px] h-8 sm:h-6 xl:h-12 bg-yellow-500",
+          "block rounded-sm w-[4px] h-8 sm:h-6 xl:h-12 bg-red-500",
           cursorClassName
         )}
       ></motion.span>
