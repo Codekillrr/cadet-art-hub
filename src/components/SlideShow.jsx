@@ -32,7 +32,7 @@ const SlideShow = () => {
         }}
         pagination={true}
         modules={[EffectCoverflow, Pagination, Autoplay]}
-        className="mySwiper rounded-2xl h-[350px]"
+        className="mySwiper rounded-2xl h-[350px] border-2 border-black"
       >
         <SwiperSlide>
           <img

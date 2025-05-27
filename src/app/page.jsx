@@ -267,8 +267,8 @@ export default function Home() {
             A complete financial infrastructure for the next generation of
             efficient companies.{" "}
           </p>
-          <p className="mt-8 text-[1.1rem] font-bold text-yellow-200">
-            Create for the future of art.
+          <p className="mt-8 text-[1.1rem] font-bold text-yellow-400">
+            Creating for the future of art.
           </p>
         </div>
 
@@ -294,7 +294,7 @@ export default function Home() {
             </span>
           </button>
         </div>
-        <div className=" border bg-neutral-800 border-neutral-700 rounded-[32px] mt-15 relative p-4">
+        <div className=" border-2 border-black bg-neutral-800 rounded-[32px] mt-15 relative p-4">
           <div className="absolute z-10 inset-x-0 bottom-0 h-20 w-full bg-gradient-to-b from-transparent via-black/80 to-black scale-[1.1] pointer-events-none"></div>
           <SlideShow />
           {/* <div className="p-2 bg-black border-neutral-700 border rounded-[24px]">
@@ -309,11 +309,13 @@ export default function Home() {
       </div>
 
       <div className="mt-20 grid grid-cols-1 gap-2 px-6 [font-family:var(--tech)]">
-        <section className=" h-[30rem] w-full rounded-2xl [background-image:radial-gradient(88%_100%_at_top,rgba(255,255,255,0.5),rgba(255,255,255,0))] relative px-4 py-20 overflow-hidden">
+        <section className=" border-2 border-slate-400 h-[30rem] w-full rounded-2xl [background-image:radial-gradient(88%_100%_at_top,rgba(255,255,255,0.5),rgba(255,255,255,0))] relative px-4 py-20 overflow-hidden">
           <div className="absolute inset-0 h-full w-full scale-[1.2] transform [mask-image:radial-gradient(#fff,transparent,75%)] opacity-10 bg-[url(https://www.creem.io/noise.webp)] bg-size-[30%]"></div>
           <div className="max-w-xs">
-            <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-primary text-yellow-200">
-              The future of work needs new financial tools
+            <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-primary text-yellow-400">
+              The <span className="text-slate-300">future</span> of{" "}
+              <span className="text-blue-400">art</span> needs a new{" "}
+              <span className="text-red-500">avinue </span>
             </h2>
             <p className="mt-4 text-left text-base/6 text-neutral-200">
               Small teams are achieving what used to require 150+ people.
@@ -337,7 +339,7 @@ export default function Home() {
             className="absolute -right-4 lg:-right-[10%] grayscale filter -bottom-10 object-contain rounded-2xl"
           />
         </section>
-        <section className=" h-[30rem] w-full rounded-2xl [background-image:radial-gradient(88%_100%_at_top,rgba(255,255,255,0.5),rgba(255,255,255,0))] relative px-4 py-20 overflow-hidden">
+        <section className="border-2 border-blue-500 h-[30rem] w-full rounded-2xl [background-image:radial-gradient(88%_100%_at_top,rgba(255,255,255,0.5),rgba(255,255,255,0))] relative px-4 py-20 overflow-hidden">
           <div className="absolute inset-0 h-full w-full scale-[1.2] transform [mask-image:radial-gradient(#fff,transparent,75%)] opacity-10 bg-[url(https://www.creem.io/noise.webp)] bg-size-[30%]"></div>
 
           <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-primary text-yellow-200">
