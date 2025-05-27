@@ -7,6 +7,7 @@ import NavBar from "@/components/NavBar";
 import Button1 from "@/components/Button1";
 import GlowTittle from "@/components/GlowTittle";
 import Button2 from "@/components/Button2";
+import SlideShow from "@/components/SlideShow";
 
 // import { FlipWords } from "@/components/ui/flip-words";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
@@ -214,7 +215,7 @@ export default function Home() {
 
       <div className="pt-[5rem] relative [font-family:var(--tech)] font-bold">
         <video
-          className="absolute transform top-[-13.5%] left-10 w-full h-full object-contain scale-262 overflow-hidden object-[37%_center] z-[-1] pointer-events-none opacity-50 mix-blend-screen"
+          className="absolute transform top-[-20%] left-10 w-full h-full object-contain scale-420 min-[380px]:scale-300 min-[425px]:scale-270 overflow-hidden object-[37%_center] z-[-1] pointer-events-none opacity-50 mix-blend-screen"
           autoPlay
           loop
           muted
@@ -293,16 +294,17 @@ export default function Home() {
             </span>
           </button>
         </div>
-        <div className="p-4 border bg-neutral-800 border-neutral-700 rounded-[32px] mt-20 relative">
-          <div className="absolute inset-x-0 bottom-0 h-40 w-full bg-gradient-to-b from-transparent via-black/80 to-black scale-[1.1] pointer-events-none"></div>
-          <div className="p-2 bg-black border-neutral-700 border rounded-[24px]">
+        <div className=" border bg-neutral-800 border-neutral-700 rounded-[32px] mt-15 relative p-4">
+          <div className="absolute z-10 inset-x-0 bottom-0 h-20 w-full bg-gradient-to-b from-transparent via-black/80 to-black scale-[1.1] pointer-events-none"></div>
+          <SlideShow />
+          {/* <div className="p-2 bg-black border-neutral-700 border rounded-[24px]">
             <Image
               src="/header.webp"
               alt="Description"
               width={1920}
               height={108}
             />
-          </div>
+          </div> */}
         </div>
       </div>
 

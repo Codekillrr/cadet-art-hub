@@ -120,9 +120,9 @@ export const TypewriterEffectSmooth = ({
   useEffect(() => {
     if (!isInView) return;
 
-    const typingSpeed = 50; // ms per character when typing
+    const typingSpeed = 100; // ms per character when typing
     const deletingSpeed = 75; // ms per character when deleting
-    const delayAfterWord = 2000; // ms to wait after word is fully typed
+    const delayAfterWord = 4000; // ms to wait after word is fully typed
 
     let timeout: NodeJS.Timeout;
 
