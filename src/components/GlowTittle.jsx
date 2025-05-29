@@ -6,7 +6,7 @@ const GlowTittle = ({ text, className }) => {
     <span className="h-full flex justify-center items-start pr-2">
       <span
         className={cn(
-          "absolute mx-auto font-geistMono text-[1.5rem] flex border w-fit bg-white blur-xl   bg-clip-text box-content font-extrabold text-transparent text-center select-none",
+          "absolute mx-auto font-geistMono text-[1.7rem] flex border w-fit bg-white blur-xl   bg-clip-text box-content font-extrabold text-transparent text-center select-none",
           className
         )}
       >

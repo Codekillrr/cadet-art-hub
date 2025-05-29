@@ -11,55 +11,75 @@ import "swiper/css/pagination";
 import { EffectCoverflow, Pagination, Autoplay } from "swiper/modules";
 
 const SlideShow = () => {
+  const slides = [
+    {
+      id: 1,
+      image: "/slides/slide.jpeg",
+      alt: "imgslide",
+    },
+    {
+      id: 2,
+      image: "/slides/slide2.jpeg",
+      alt: "imgslide",
+    },
+    {
+      id: 3,
+      image: "/slides/slide3.jpeg",
+      alt: "imgslide",
+    },
+    {
+      id: 4,
+      image: "/slides/slide4.jpeg",
+      alt: "imgslide",
+    },
+    {
+      id: 5,
+      image: "/slides/slide5.jpeg",
+      alt: "imgslide",
+    },
+    {
+      id: 6,
+      image: "/slides/slide6.jpeg",
+      alt: "imgslide",
+    },
+  ];
+
   return (
-    <div className="rounded-2xl">
-      <Swiper
-        effect={"coverflow"}
-        loop={true}
-        autoplay={{
-          delay: 3500,
-        }}
-        direction={"vertical"}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={"1"}
-        coverflowEffect={{
-          rotate: 30,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        }}
-        pagination={true}
-        modules={[EffectCoverflow, Pagination, Autoplay]}
-        className="mySwiper rounded-2xl h-[350px] border-2 border-black"
-      >
-        <SwiperSlide>
-          <img
-            className="rounded-2xl "
-            src="https://swiperjs.com/demos/images/nature-1.jpg"
-          />
+    // <div className=" border-2 mx-auto border-black max-w-[1070px] bg-neutral-800 rounded-[32px] mt-15 relative p-4">
+    // <div className="rounded-2xl mx-auto max-w-[1000px] h-full">
+    <Swiper
+      effect={"coverflow"}
+      loop={true}
+      autoplay={{
+        delay: 3500,
+      }}
+      // direction={"vertical"}
+      grabCursor={true}
+      centeredSlides={true}
+      slidesPerView={"1.5"}
+      coverflowEffect={{
+        rotate: 30,
+        stretch: 0,
+        depth: 360,
+        modifier: 1,
+        slideShadows: true,
+      }}
+      pagination={true}
+      modules={[EffectCoverflow, Pagination, Autoplay]}
+      className="mySwiper rounded-2xl h-[200px] relative z-15"
+    >
+      {slides.map((slide) => (
+        <SwiperSlide key={slide.id}>
+          <img className="rounded-xl " src={slide.image} />
         </SwiperSlide>
-        <SwiperSlide>
-          <img
-            className="rounded-2xl "
-            src="https://swiperjs.com/demos/images/nature-2.jpg"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            className="rounded-2xl"
-            src="https://swiperjs.com/demos/images/nature-3.jpg"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            className="rounded-2xl "
-            src="https://swiperjs.com/demos/images/nature-4.jpg"
-          />
-        </SwiperSlide>
-      </Swiper>
-    </div>
+      ))}
+
+      <div className="absolute blur flex items-end z-10 w-full inset-x-0 -bottom-5 h-10 bg-gradient-to-b from-transparent via-black/80 to-black scale-[1.1] pointer-events-none"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(to_top_left,rgba(0,0,0,0.8),transparent)]"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(to_top_right,rgba(0,0,0,0.8),transparent)]"></div>
+    </Swiper>
+    // </div>
+    // </div>
   );
 };
 
